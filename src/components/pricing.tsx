@@ -46,22 +46,17 @@ export function Pricing() {
           </p>
 
           {/* Price row */}
-          <div className="flex items-baseline gap-6 mb-8">
-            <div>
-              <span className="text-3xl font-extrabold text-navy">
-                AUD $3,800
-              </span>
-              <span className="text-sm text-text-light ml-1">
-                one-time setup
-              </span>
-            </div>
-            <div className="h-8 w-px bg-border-light" />
+          <div className="flex flex-col sm:flex-row sm:items-baseline gap-4 sm:gap-6 mb-8">
             <div>
               <span className="text-3xl font-extrabold text-navy">
                 AUD $397
               </span>
               <span className="text-sm text-text-light ml-1">/month</span>
             </div>
+            <div className="hidden sm:block h-8 w-px bg-border-light" />
+            <p className="text-sm text-text-mid">
+              Setup fee discussed on your free strategy call
+            </p>
           </div>
 
           {/* Features grid */}
