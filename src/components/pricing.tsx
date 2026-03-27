@@ -1,0 +1,92 @@
+import { Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const features = [
+  "Custom-designed plumbing website",
+  "Missed-call text-back system",
+  "Automated SMS follow-up sequences",
+  "Google review automation",
+  "Lead tracking dashboard",
+  "Mobile-optimised design",
+  "Calendar booking integration",
+  "Monthly performance reports",
+  "Ongoing system optimisation",
+  "Priority support",
+];
+
+export function Pricing() {
+  return (
+    <section id="pricing" className="py-[70px] bg-bg-alt">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12 animate-on-scroll">
+          <p className="text-sm font-semibold text-magenta mb-2">Pricing</p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-3">
+            One system. Everything you need.
+          </h2>
+          <p className="text-text-mid max-w-2xl mx-auto">
+            No hidden fees. No confusing tiers. One complete system built for
+            plumbing businesses.
+          </p>
+        </div>
+
+        {/* Pricing card */}
+        <div className="animate-on-scroll max-w-xl mx-auto bg-white border border-border-light rounded-2xl p-8 relative overflow-hidden">
+          {/* Popular ribbon */}
+          <div className="absolute top-5 -right-10 bg-magenta text-white text-xs font-bold px-10 py-1.5 rotate-45 shadow-sm">
+            Popular
+          </div>
+
+          <h3 className="text-xl font-bold text-navy mb-1">
+            The Plumber Growth System
+          </h3>
+          <p className="text-sm text-text-mid mb-6">
+            Done-for-you digital system. No lead ever slips through the cracks
+            again.
+          </p>
+
+          {/* Price row */}
+          <div className="flex items-baseline gap-6 mb-8">
+            <div>
+              <span className="text-3xl font-extrabold text-navy">
+                AUD $3,800
+              </span>
+              <span className="text-sm text-text-light ml-1">
+                one-time setup
+              </span>
+            </div>
+            <div className="h-8 w-px bg-border-light" />
+            <div>
+              <span className="text-3xl font-extrabold text-navy">
+                AUD $397
+              </span>
+              <span className="text-sm text-text-light ml-1">/month</span>
+            </div>
+          </div>
+
+          {/* Features grid */}
+          <div className="grid sm:grid-cols-2 gap-3 mb-8">
+            {features.map((f) => (
+              <div key={f} className="flex items-start gap-2">
+                <div className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full bg-green-soft flex items-center justify-center">
+                  <Check className="h-3 w-3 text-green" />
+                </div>
+                <span className="text-sm text-text-body">{f}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <Button asChild size="lg" className="w-full">
+            <a href="#pricing">Book Your Free Strategy Call &rarr;</a>
+          </Button>
+
+          <p className="text-xs text-text-light text-center mt-4">
+            No lock-in contracts. Cancel monthly anytime. Your website is yours
+            to keep.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

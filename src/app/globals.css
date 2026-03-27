@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-magenta: #C2185B;
+  --color-magenta-hover: #A01550;
+  --color-magenta-soft: #FDE4EF;
+  --color-navy: #1A1A2E;
+  --color-navy-mid: #222240;
+  --color-bg-alt: #F7F7FA;
+  --color-text-body: #2E2E3A;
+  --color-text-mid: #55556A;
+  --color-text-light: #8888A0;
+  --color-border-light: #E4E4EC;
+  --color-green: #00A86B;
+  --color-green-soft: #E8F8F0;
+  --color-red: #D32F2F;
+  --color-red-soft: #FEECEC;
+  --font-sans: var(--font-poppins);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-poppins), sans-serif;
+  color: #2E2E3A;
+  background: #ffffff;
+}
+
+/* Accordion animations */
+[data-state="open"] > [data-accordion-content] {
+  animation: accordion-down 200ms ease-out;
+}
+
+[data-state="closed"] > [data-accordion-content] {
+  animation: accordion-up 200ms ease-out;
+}
+
+@keyframes accordion-down {
+  from { height: 0; opacity: 0; }
+  to { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to { height: 0; opacity: 0; }
+}
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Phone notification animations */
+@keyframes slide-up-fade {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.notification-1 { animation: slide-up-fade 0.5s ease-out 0.2s both; }
+.notification-2 { animation: slide-up-fade 0.5s ease-out 0.5s both; }
+.notification-3 { animation: slide-up-fade 0.5s ease-out 0.8s both; }
+.notification-4 { animation: slide-up-fade 0.5s ease-out 1.1s both; }
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 3s ease-in-out 1.5s infinite;
+}
+
+/* Pulse dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
