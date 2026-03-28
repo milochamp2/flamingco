@@ -1,6 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { PhoneMockup } from "@/components/phone-mockup";
 
+const capabilities = [
+  "Missed-call text-back",
+  "Automated follow-ups",
+  "Review requests",
+];
+
 export function Hero() {
   return (
     <section className="py-[70px] bg-white">
@@ -21,36 +27,35 @@ export function Hero() {
             </h1>
 
             <p className="text-base text-text-mid mb-8 max-w-lg">
-              We build automated growth systems for plumbing businesses — so
-              every missed call gets a text back, every lead gets followed up,
-              and every happy customer leaves a 5-star review. Automatically.
+              FlamingCo builds websites and automation systems for Australian
+              plumbing businesses — so missed calls get followed up, quotes get
+              chased, and reviews come in without you having to ask.
             </p>
 
             <div className="flex flex-wrap gap-3 mb-8">
               <Button asChild size="lg">
-                <a href="#pricing">Get Your Growth System &rarr;</a>
+                <a href="#pricing">See How It Works &rarr;</a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="#solution">See How It Works</a>
+                <a href="#solution">What&apos;s Included</a>
               </Button>
             </div>
 
-            {/* Metrics */}
-            <div className="flex items-center gap-6 text-sm">
-              <div>
-                <span className="font-bold text-navy">93%</span>{" "}
-                <span className="text-text-light">Leads Captured</span>
-              </div>
-              <div className="h-4 w-px bg-border-light" />
-              <div>
-                <span className="font-bold text-navy">24/7</span>{" "}
-                <span className="text-text-light">Auto Follow-up</span>
-              </div>
-              <div className="h-4 w-px bg-border-light" />
-              <div>
-                <span className="font-bold text-navy">3x</span>{" "}
-                <span className="text-text-light">More Reviews</span>
-              </div>
+            {/* Capability pills — honest, factual */}
+            <div className="flex flex-wrap items-center gap-2">
+              {capabilities.map((cap, i) => (
+                <span
+                  key={cap}
+                  className="flex items-center gap-2 text-xs font-medium text-text-mid"
+                >
+                  <span className="bg-bg-alt border border-border-light text-navy px-3 py-1 rounded-full text-xs font-medium">
+                    {cap}
+                  </span>
+                  {i < capabilities.length - 1 && (
+                    <span className="text-border-light">·</span>
+                  )}
+                </span>
+              ))}
             </div>
           </div>
 

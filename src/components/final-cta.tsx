@@ -14,16 +14,17 @@ export function FinalCTA() {
 
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 animate-on-scroll">
-          Ready to stop losing leads to your{" "}
-          <em className="text-magenta">competitors?</em>
+          Let&apos;s find out where you&apos;re losing leads —{" "}
+          <em className="text-magenta">and fix it.</em>
         </h2>
-        <p className="text-white/70 mb-8 animate-on-scroll">
-          Book a free 30-minute strategy call. We&apos;ll show you exactly where
-          you&apos;re losing leads and how to fix it.
+        <p className="text-white/60 mb-8 animate-on-scroll max-w-xl mx-auto">
+          Book a free 30-minute call. We&apos;ll walk through your current setup,
+          identify the gaps, and show you exactly what a FlamingCo system would
+          look like for your business. No obligation.
         </p>
         <div className="animate-on-scroll">
           <Button asChild size="lg">
-            <a href="#pricing">Book Your Free Strategy Call &rarr;</a>
+            <a href="#pricing">Book a Free Strategy Call &rarr;</a>
           </Button>
         </div>
       </div>

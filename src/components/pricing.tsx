@@ -22,27 +22,22 @@ export function Pricing() {
         <div className="text-center mb-12 animate-on-scroll">
           <p className="text-sm font-semibold text-magenta mb-2">Pricing</p>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-3">
-            One system. Everything you need.
+            One system. Everything included.
           </h2>
           <p className="text-text-mid max-w-2xl mx-auto">
-            No hidden fees. No confusing tiers. One complete system built for
-            plumbing businesses.
+            No confusing tiers. No add-on fees. One complete system built for
+            plumbing businesses — website, automations, and ongoing support.
           </p>
         </div>
 
         {/* Pricing card */}
-        <div className="animate-on-scroll max-w-xl mx-auto bg-white border border-border-light rounded-2xl p-8 relative overflow-hidden">
-          {/* Popular ribbon */}
-          <div className="absolute top-5 -right-10 bg-magenta text-white text-xs font-bold px-10 py-1.5 rotate-45 shadow-sm">
-            Popular
-          </div>
-
+        <div className="animate-on-scroll max-w-xl mx-auto bg-white border border-border-light rounded-2xl p-8">
           <h3 className="text-xl font-bold text-navy mb-1">
-            The Plumber Growth System
+            The FlamingCo Plumber System
           </h3>
           <p className="text-sm text-text-mid mb-6">
-            Done-for-you digital system. No lead ever slips through the cracks
-            again.
+            A done-for-you website and automation system built around your
+            plumbing business — not a generic template.
           </p>
 
           {/* Price row */}
@@ -73,12 +68,12 @@ export function Pricing() {
 
           {/* CTA */}
           <Button asChild size="lg" className="w-full">
-            <a href="#pricing">Book Your Free Strategy Call &rarr;</a>
+            <a href="#pricing">Book a Free Strategy Call &rarr;</a>
           </Button>
 
           <p className="text-xs text-text-light text-center mt-4">
-            No lock-in contracts. Cancel monthly anytime. Your website is yours
-            to keep.
+            No lock-in contracts. Cancel monthly, anytime. Your website stays
+            yours.
           </p>
         </div>
       </div>

@@ -2,39 +2,39 @@ import { X, Check, ArrowRight } from "lucide-react";
 
 const beforeItems = [
   {
-    title: "Missed calls = lost jobs",
-    desc: "$500-$2,000 walking away every time your phone goes to voicemail",
+    title: "Missed calls become lost jobs",
+    desc: "Every unanswered call while you're on-site is a potential customer calling the next plumber on Google.",
   },
   {
-    title: "Quotes that disappear",
-    desc: "No follow-up means warm leads go cold while you\u2019re on the tools",
+    title: "Quotes go cold with no follow-up",
+    desc: "Without a system, warm leads go quiet while you're on the tools — and you're the one who loses the job.",
   },
   {
-    title: "Great work, no reviews",
-    desc: "Your competitor has 200+ reviews because he has a system",
+    title: "Good work, almost no reviews",
+    desc: "Reviews don't come in automatically. If you're not asking consistently, they don't accumulate.",
   },
   {
-    title: "Feast or famine",
-    desc: "Some weeks the phone won\u2019t stop. Other weeks, crickets.",
+    title: "Inconsistent lead flow",
+    desc: "No pipeline means unpredictable revenue. Busy one week, quiet the next — with no visibility of what's coming.",
   },
 ];
 
 const afterItems = [
   {
-    title: "Every call captured",
-    desc: "Missed calls get an instant text back \u2014 leads never slip away",
+    title: "Every missed call gets a response",
+    desc: "An instant text-back is sent automatically — keeping the lead warm before they call someone else.",
   },
   {
-    title: "Automatic follow-ups",
-    desc: "SMS sequences chase quotes so nothing falls through the cracks",
+    title: "Follow-ups run without you",
+    desc: "Quote sent and no reply? The system follows up for you over the next few days, automatically.",
   },
   {
-    title: "5-star reviews on autopilot",
-    desc: "Every finished job triggers a review request automatically",
+    title: "Reviews come in after every job",
+    desc: "Each completed job triggers a review request — building your Google presence without extra admin.",
   },
   {
-    title: "Consistent lead flow",
-    desc: "A pipeline that works 24/7, even while you sleep",
+    title: "A lead pipeline that runs 24/7",
+    desc: "Every enquiry is tracked, responded to, and followed up — whether you're on-site or off the clock.",
   },
 ];
 
@@ -45,14 +45,14 @@ export function BeforeAfter() {
         {/* Header */}
         <div className="text-center mb-12 animate-on-scroll">
           <p className="text-sm font-semibold text-magenta mb-2">
-            The Problem &rarr; The Solution
+            The Gap Most Plumbers Don&apos;t See
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-3">
-            What changes when you install a growth system
+            It&apos;s not a lead problem. It&apos;s a systems problem.
           </h2>
           <p className="text-text-mid max-w-2xl mx-auto">
-            Most plumbers don&apos;t have a lead problem. They have a systems
-            problem.
+            Most plumbing businesses have enough enquiries to grow — they&apos;re
+            just losing them to slow response times, no follow-up, and no process.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export function BeforeAfter() {
           {/* After card */}
           <div className="animate-on-scroll bg-navy rounded-xl p-6 text-white">
             <span className="inline-block text-xs font-semibold text-magenta bg-magenta-soft px-3 py-1 rounded-full mb-5">
-              With your growth system
+              With a FlamingCo system
             </span>
             <div className="space-y-5">
               {afterItems.map((item) => (

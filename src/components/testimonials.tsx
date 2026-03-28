@@ -1,48 +1,41 @@
 import Image from "next/image";
-import { Star } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
-const testimonials = [
+const workflows = [
   {
-    quote:
-      "I used to miss 5-6 calls a day on jobs. Now every one gets a text back instantly, and most book in. Like having a receptionist that never takes a day off.",
-    name: "MP",
-    role: "Residential Plumbing, Sydney",
+    label: "Workflow Demo",
+    title: "Missed Call Text-Back",
+    problem:
+      "Every unanswered call while you're on-site is a potential job walking straight to the next plumber on Google.",
+    solution:
+      "The system detects a missed call and sends an automatic SMS within seconds — with a booking link and your business details.",
+    outcome:
+      "Enquiries stay warm. Leads don't disappear. You respond without lifting a finger.",
+    icon: "📞",
   },
   {
-    quote:
-      "Went from 12 Google reviews to 67 in three months without asking a single customer myself. The system handles it. Phone rings way more now.",
-    name: "DK",
-    role: "Emergency Plumbing, Melbourne",
+    label: "Workflow Demo",
+    title: "Automated Quote Follow-Up",
+    problem:
+      "Leads who request a quote go cold fast when there's no follow-up. Chasing manually takes time most plumbers don't have.",
+    solution:
+      "After a quote is sent, the system follows up automatically via SMS over the next few days — keeping the conversation open without any manual effort.",
+    outcome:
+      "Fewer quotes that disappear. Better conversion without the admin overhead.",
+    icon: "💬",
   },
   {
-    quote:
-      "The website paid for itself in the first week \u2014 three new customers found us on Google. The automations are icing on top. Best investment for my business.",
-    name: "RJ",
-    role: "Residential & Commercial, Brisbane",
+    label: "Workflow Demo",
+    title: "Post-Job Review Requests",
+    problem:
+      "Most satisfied customers don't leave reviews unless they're asked. Asking manually after every job is easy to forget and easy to skip.",
+    solution:
+      "After a job is marked complete, the system sends a follow-up message directing the customer to leave a Google review — automatically.",
+    outcome:
+      "A consistent flow of reviews built into your process, not bolted on as an afterthought.",
+    icon: "⭐",
   },
 ];
-
-function LaurelWreath() {
-  return (
-    <Image
-      src="/logo/laurel leaf crown.png"
-      alt="Laurel wreath"
-      width={120}
-      height={120}
-      className="mx-auto mb-1 drop-shadow-sm"
-    />
-  );
-}
-
-function Stars() {
-  return (
-    <div className="flex gap-0.5 mb-3">
-      {[...Array(5)].map((_, i) => (
-        <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-      ))}
-    </div>
-  );
-}
 
 export function Testimonials() {
   return (
@@ -50,29 +43,72 @@ export function Testimonials() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12 animate-on-scroll">
-          <p className="text-sm font-semibold text-magenta mb-2">
-            Testimonials
+          <p className="text-sm font-semibold text-magenta mb-3">
+            System in Action
           </p>
-          <LaurelWreath />
-          <h2 className="text-3xl sm:text-4xl font-bold text-navy mt-1">
-            Results that speak for themselves
+          <Image
+            src="/logo/laurel leaf crown.png"
+            alt="Laurel wreath"
+            width={100}
+            height={100}
+            className="mx-auto mb-3 drop-shadow-sm"
+          />
+          <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-3">
+            Real workflows. Built for plumbing businesses.
           </h2>
+          <p className="text-text-mid max-w-2xl mx-auto">
+            These are examples of the automations we build into every system —
+            designed around the specific ways plumbing businesses lose leads.
+          </p>
         </div>
 
         {/* Cards */}
         <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
+          {workflows.map((w) => (
             <div
-              key={t.name}
-              className="animate-on-scroll bg-white border border-border-light rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 max-w-sm mx-auto md:max-w-none"
+              key={w.title}
+              className="animate-on-scroll bg-white border border-border-light rounded-xl p-6 flex flex-col transition-all duration-300 hover:shadow-md hover:-translate-y-0.5"
             >
-              <Stars />
-              <p className="text-sm text-text-mid mb-5 leading-relaxed">
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <div>
-                <p className="font-bold text-navy text-sm">{t.name}</p>
-                <p className="text-xs text-text-light">{t.role}</p>
+              {/* Label */}
+              <span className="inline-block text-xs font-semibold text-magenta bg-magenta-soft px-3 py-1 rounded-full mb-4 w-fit">
+                {w.label}
+              </span>
+
+              {/* Icon + Title */}
+              <div className="flex items-center gap-3 mb-5">
+                <span className="text-2xl">{w.icon}</span>
+                <h3 className="font-bold text-navy text-base">{w.title}</h3>
+              </div>
+
+              {/* Problem → Solution → Outcome */}
+              <div className="space-y-4 flex-1">
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-text-light mb-1">
+                    The Problem
+                  </p>
+                  <p className="text-sm text-text-mid leading-relaxed">
+                    {w.problem}
+                  </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <ArrowRight className="h-3.5 w-3.5 text-magenta flex-shrink-0" />
+                </div>
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-wider text-text-light mb-1">
+                    How It&apos;s Solved
+                  </p>
+                  <p className="text-sm text-text-mid leading-relaxed">
+                    {w.solution}
+                  </p>
+                </div>
+              </div>
+
+              {/* Outcome pill */}
+              <div className="mt-5 pt-4 border-t border-border-light">
+                <p className="text-[11px] font-semibold uppercase tracking-wider text-text-light mb-1.5">
+                  Outcome
+                </p>
+                <p className="text-sm font-medium text-navy">{w.outcome}</p>
               </div>
             </div>
           ))}
