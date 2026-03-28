@@ -9,7 +9,11 @@ const capabilities = [
 
 export function Hero() {
   return (
-    <section className="py-[70px] bg-white">
+    <section className="py-[70px] bg-premium-hero relative overflow-hidden">
+      {/* Ambient orbs */}
+      <div className="absolute -top-32 -right-32 h-[500px] w-[500px] rounded-full opacity-[0.07] blur-3xl pointer-events-none" style={{ background: "radial-gradient(circle, #C2185B 0%, transparent 70%)" }} />
+      <div className="absolute -bottom-20 -left-20 h-[350px] w-[350px] rounded-full opacity-[0.05] blur-3xl pointer-events-none" style={{ background: "radial-gradient(circle, #1A1A2E 0%, transparent 70%)" }} />
+
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left column */}

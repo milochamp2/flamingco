@@ -2,6 +2,7 @@
 
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
+import { Marquee } from "@/components/marquee";
 import { BeforeAfter } from "@/components/before-after";
 import { DemoSolution } from "@/components/demo-solution";
 import { HowItWorks } from "@/components/how-it-works";
@@ -14,8 +15,10 @@ import { FAQ } from "@/components/faq";
 import { FinalCTA } from "@/components/final-cta";
 import { Footer } from "@/components/footer";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { useLenis } from "@/hooks/use-lenis";
 
 export default function Home() {
+  useLenis();
   useScrollAnimation();
 
   return (
@@ -23,6 +26,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Marquee />
         <BeforeAfter />
         <DemoSolution />
         <HowItWorks />
