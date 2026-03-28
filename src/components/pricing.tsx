@@ -98,7 +98,7 @@ export function Pricing() {
 
             {/* CTA */}
             <Button asChild size="lg" className="w-full text-base">
-              <a href="#pricing">Book Your Free Strategy Call &rarr;</a>
+              <a href="https://calendly.com/alananoaj/mvp-call" target="_blank" rel="noopener noreferrer">Book Your Free Strategy Call &rarr;</a>
             </Button>
 
             <p className="text-xs text-text-light text-center mt-4 leading-relaxed">

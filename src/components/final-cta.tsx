@@ -24,7 +24,7 @@ export function FinalCTA() {
         </p>
         <div className="animate-on-scroll">
           <Button asChild size="lg">
-            <a href="#pricing">Book a Free Strategy Call &rarr;</a>
+            <a href="https://calendly.com/alananoaj/mvp-call" target="_blank" rel="noopener noreferrer">Book a Free Strategy Call &rarr;</a>
           </Button>
         </div>
       </div>

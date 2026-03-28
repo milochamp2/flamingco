@@ -50,7 +50,7 @@ export function Navbar() {
           {/* CTA */}
           <div className="hidden md:block">
             <Button asChild>
-              <a href="#pricing">Book a Free Call &rarr;</a>
+              <a href="https://calendly.com/alananoaj/mvp-call" target="_blank" rel="noopener noreferrer">Book a Free Call &rarr;</a>
             </Button>
           </div>
 
@@ -78,7 +78,7 @@ export function Navbar() {
               </a>
             ))}
             <Button asChild size="sm" className="mt-2 w-fit">
-              <a href="#pricing" onClick={() => setMobileOpen(false)}>
+              <a href="https://calendly.com/alananoaj/mvp-call" onClick={() => setMobileOpen(false)}>
                 Book a Free Call &rarr;
               </a>
             </Button>
