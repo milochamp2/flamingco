@@ -8,6 +8,7 @@ import { HowItWorks } from "@/components/how-it-works";
 import { StatsBanner } from "@/components/stats-banner";
 import { About } from "@/components/about";
 import { Testimonials } from "@/components/testimonials";
+import { CaseStudies } from "@/components/case-studies";
 import { Pricing } from "@/components/pricing";
 import { FAQ } from "@/components/faq";
 import { FinalCTA } from "@/components/final-cta";
@@ -28,6 +29,7 @@ export default function Home() {
         <StatsBanner />
         <About />
         <Testimonials />
+        <CaseStudies />
         <Pricing />
         <FAQ />
         <FinalCTA />

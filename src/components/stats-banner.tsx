@@ -1,6 +1,6 @@
 const stats = [
   { value: "93", accent: "%", label: "Leads Captured" },
-  { value: "<5", accent: "s", label: "Response Time" },
+  { value: "<80", accent: "ms", label: "Server Load Time" },
   { value: "3", accent: "x", label: "More Reviews" },
   { value: "14", accent: "d", label: "Setup Time" },
 ];
