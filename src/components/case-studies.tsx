@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 
 const cases = [
@@ -6,40 +7,50 @@ const cases = [
     category: "Web App",
     desc: "Smart personal finance and budget planning app. Private, fast, and built with Next.js — all data stored locally on device.",
     url: "https://financial-budget-planning.vercel.app/",
-    gradient: "from-emerald-400 to-teal-600",
+    logo: "/logo/budgetflow logo/budgetflow.png",
+    logoBg: "#1a1033",
     tag: "Personal Project",
+    objectFit: "cover" as const,
   },
   {
     name: "Bayliss Building Group",
     category: "Corporate Website",
     desc: "Commercial construction & carpentry company in Victoria with 15+ years and 200+ projects. Built for credibility and lead generation.",
     url: "https://bayliss-building-group.vercel.app/",
-    gradient: "from-slate-500 to-slate-800",
+    logo: "/logo/bayliss bldg group logo/bayliss logo.png",
+    logoBg: "#1a1a1a",
     tag: "Client",
+    objectFit: "contain" as const,
   },
   {
     name: "HyperFit",
     category: "Gym & Fitness",
     desc: "Mitcham's premier functional training hub. Full-service gym website with classes, memberships, and recovery services.",
     url: "https://hyperfit.com.au/",
-    gradient: "from-orange-400 to-red-600",
+    logo: "/logo/hyperfit logo/hyperfit.png",
+    logoBg: "#0a0a0a",
     tag: "Client — Live",
+    objectFit: "contain" as const,
   },
   {
     name: "Epic Party Hire",
     category: "Event Hire",
     desc: "Party equipment hire across Melbourne — slushie machines, photo booths, giant letters, and outdoor cinemas. Built to convert.",
     url: "https://www.epicpartyhire.com.au/",
-    gradient: "from-violet-500 to-purple-700",
+    logo: "/logo/epic party hire logo/eph logo.png",
+    logoBg: "#111111",
     tag: "Client — Live",
+    objectFit: "cover" as const,
   },
   {
     name: "Mitcham Recovery Hub",
     category: "Health & Wellness",
     desc: "Recovery and wellness centre in Mitcham. Clean, conversion-focused website built to drive bookings.",
     url: "https://themitchamrecoveryhub.com.au/",
-    gradient: "from-cyan-400 to-blue-600",
+    logo: "/logo/mitcham recovery hub logo/recovery hub logo.png",
+    logoBg: "#0d1a2e",
     tag: "Client — Live",
+    objectFit: "contain" as const,
   },
 ];
 
@@ -69,18 +80,31 @@ export function CaseStudies() {
               rel="noopener noreferrer"
               className="animate-on-scroll group bg-white border border-border-light rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
             >
-              {/* Gradient thumbnail */}
+              {/* Logo thumbnail */}
               <div
-                className={`h-40 bg-gradient-to-br ${c.gradient} flex items-end p-4`}
+                className="relative h-44 w-full overflow-hidden"
+                style={{ backgroundColor: c.logoBg }}
               >
-                <span className="text-xs font-semibold text-white/80 bg-black/20 px-2.5 py-1 rounded-full">
+                <Image
+                  src={c.logo}
+                  alt={c.name}
+                  fill
+                  className={`transition-transform duration-500 group-hover:scale-105 ${
+                    c.objectFit === "cover"
+                      ? "object-cover"
+                      : "object-contain p-6"
+                  }`}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                {/* Tag overlay */}
+                <span className="absolute bottom-3 left-3 text-xs font-semibold text-white/90 bg-black/40 backdrop-blur-sm px-2.5 py-1 rounded-full">
                   {c.tag}
                 </span>
               </div>
 
               {/* Content */}
               <div className="p-5">
-                <div className="flex items-start justify-between gap-2 mb-2">
+                <div className="flex items-start justify-between gap-2 mb-1.5">
                   <div>
                     <p className="font-bold text-navy">{c.name}</p>
                     <p className="text-xs text-magenta font-medium">

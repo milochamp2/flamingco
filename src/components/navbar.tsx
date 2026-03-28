@@ -26,7 +26,8 @@ export function Navbar() {
               alt="Flamingo Digital"
               width={48}
               height={48}
-              className="h-12 w-auto"
+              className="h-12 w-auto object-contain drop-shadow-sm"
+              priority
             />
             <span className="text-lg font-bold text-navy">
               Flamingo <span className="text-magenta">Digital</span>
