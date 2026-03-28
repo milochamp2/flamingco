@@ -22,7 +22,7 @@ export function Navbar() {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <Image
-              src="/logo/flamingco.png"
+              src="/logo/flamingco-removebg-preview.png"
               alt="Flamingo Digital"
               width={48}
               height={48}

@@ -9,7 +9,7 @@ export function About() {
           <div className="animate-on-scroll">
             <div className="rounded-2xl bg-navy flex flex-col items-center justify-center py-14 px-10 max-w-sm mx-auto lg:mx-0">
               <Image
-                src="/logo/flamingco.png"
+                src="/logo/flamingco-removebg-preview.png"
                 alt="FlamingCo"
                 width={80}
                 height={80}
